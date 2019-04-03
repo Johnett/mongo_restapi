@@ -47,7 +47,9 @@ exports.deleteTask = (req, res) => {
     if (err) {
       res.status(404).send(err);
     }
-    res.status(200).json({ message: res.message });
-  
+    if(!item){
+      res.status(404).json({ message: "User not found"});
+    }
+    res.status(200).json({ message: "Task successfully deleted" });
   });
 };
