@@ -47,6 +47,7 @@ exports.deleteTask = (req, res) => {
     if (err) {
       res.status(404).send(err);
     }
-    res.status(200).json({ message: "Task successfully deleted" });
+    res.status(200).json({ message: res.message });
+  
   });
 };
