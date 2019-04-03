@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const taskController = require("./controllers/TaskController");
+const userController = require("./controllers/UserController");
 
 // db instance connection
 require("./config/db");
@@ -23,6 +24,17 @@ app
   .get(taskController.readTask)
   .put(taskController.updateTask)
   .delete(taskController.deleteTask);
+
+app
+  .route("/users")
+  .get(userController.listAllUsers)
+  .post(userController.createNewUser);
+
+app
+  .route("/users/:userid")
+  .get(userController.readTask)
+  .put(userController.updateUser)
+  .delete(userController.deleteUser);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
