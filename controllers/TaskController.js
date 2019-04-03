@@ -42,7 +42,7 @@ exports.updateTask = (req, res) => {
   );
 };
 
-exports.deleteTask = (req, body) => {
+exports.deleteTask = (req, res) => {
   Task.remove({ _id: req.params.taskid }, (err, task) => {
     if (err) {
       res.status(404).send(err);
