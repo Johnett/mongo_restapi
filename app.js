@@ -25,16 +25,16 @@ app
   .put(taskController.updateTask)
   .delete(taskController.deleteTask);
 
-app
-  .route("/users")
-  .get(userController.listAllUsers)
-  .post(userController.createNewUser);
+// app
+//   .route("/users")
+//   .get(userController.listAllUsers)
+//   .post(userController.createNewUser);
 
-app
-  .route("/users/:userid")
-  .get(userController.readTask)
-  .put(userController.updateUser)
-  .delete(userController.deleteUser);
+// app
+//   .route("/users/:userid")
+//   .get(userController.readTask)
+//   .put(userController.updateUser)
+//   .delete(userController.deleteUser);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
