@@ -5,7 +5,8 @@ const dbURI =
 
 const options = {
   reconnectTries: Number.MAX_VALUE,
-  poolSize: 10
+  poolSize: 10,
+  useNewUrlParser: true
 };
 
 mongoose.connect(dbURI, options).then(
