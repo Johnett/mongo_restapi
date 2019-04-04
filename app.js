@@ -30,11 +30,11 @@ app
   .get(userController.listAllUsers)
   .post(userController.createNewUser);
 
-// app
-//   .route("/users/:userid")
-//   .get(userController.readTask)
-//   .put(userController.updateUser)
-//   .delete(userController.deleteUser);
+app
+  .route("/users/:userid")
+  .get(userController.readUser)
+  .put(userController.updateUser)
+  .delete(userController.deleteUser);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
