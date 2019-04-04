@@ -25,10 +25,10 @@ app
   .put(taskController.updateTask)
   .delete(taskController.deleteTask);
 
-// app
-//   .route("/users")
-//   .get(userController.listAllUsers)
-//   .post(userController.createNewUser);
+app
+  .route("/users")
+  .get(userController.listAllUsers)
+  .post(userController.createNewUser);
 
 // app
 //   .route("/users/:userid")
