@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Javascript Test</title>
+<script>
+		function myFunction() {
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "{{ url('https://crmtest.duture.com/Api/access_token') }}", true);
+		xhr.setRequestHeader("Content-type", "application/json");
+		xhr.send(JSON.stringify({
+	"grant_type":"client_credentials",
+	"client_id":"7e3f1b20-a7db-4ff2-66cd-5d494c50fc6c",
+	"client_secret":"test"
+}));
+		}
+</script>
+</head>
+<body>
+<h1>Test Segment</h1>
+<input type="button" value="Submit" id="btv" onclick="myFunction()"/>
+</body>
+</html>
